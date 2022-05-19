@@ -1,0 +1,40 @@
+// MEDIA QUERIES BREAKPOINTS
+@import './breakpoints';
+
+// BASE, VARIABLES, MIXINS, UTILITY
+@import './base';
+
+// LAYOUT
+@import './layout';
+
+// COMPONENTS
+@import './components';
+
+
+
+// <div class="app-wrapper">
+//         <header class="header">
+//             <div class="previous-page">
+//                 <a href="#" class="previous-page-link__link">
+//                     <img class="previous-page-link__icon" src="./img/back_ico.svg" alt="previous page icon">
+//                 </a>
+//             </div>
+//             <div class="headers-wrapper">
+//                 <h3 class="header__category-title">ALBUM</h3>
+//                 <h3 class="header__album-title">Unreleased</h3>
+//             </div>
+//             <div class="show-more">
+//                 <button class="show-more__button">
+//                     <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+//                 </button>
+//             </div>
+//         </header>
+//         <section class="songs" aria-label="Songs carrousel playlist">
+//             <div class="song-item">
+//                 <img src="./img/unreleased_cover.png" alt="Kayne West album photo" class="song-item__image">
+//                 <h1 class="song-item__title">
+//                     Self Conscious
+//                 </h1>
+//                 <p class="song-item__author">KAYNE WEST</p>
+//             </div>
+//         </section>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/scripts/app.js" defer></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <header class="header">
+            <div class="previous-page">
+                <a href="#" class="previous-page-link__link">
+                    <img class="previous-page-link__icon" src="./img/back_ico.svg" alt="previous page icon">
+                </a>
+            </div>
+            <div class="headers-wrapper">
+                <h3 class="header__category-title">ALBUM</h3>
+                <h3 class="header__album-title">Unreleased</h3>
+            </div>
+            <div class="show-more">
+                <button class="show-more__button">
+                    <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+                </button>
+            </div>
+        </header>
+        <section class="songs" aria-label="Songs carrousel playlist">
+            <div class="song-item">
+                <img src="./img/unreleased_cover.png" alt="Kayne West album photo" class="song-item__image">
+                <h1 class="song-item__title">
+                    Self Conscious
+                </h1>
+                <p class="song-item__author">KAYNE WEST</p>
+            </div>
+        </section>
+        <section aria-label="Song player" class="player">
+            <div class="player-wrapper">
+                <button class="player__icon--small">
+                    <img src="./img/playlist_ico.svg" alt="playlist button">
+                </button>
+                <button class="player__icon--small">
+                    <img src="./img/previous_ico.svg" alt="previous song button">
+                </button>
+                <button id="play-btn" class="player__icon--big">
+                    <img src="./img/playlist_ico.svg" alt="previous song button">
+                </button>
+                <button class="player__icon--small">
+                    <img src="./img/next_ico.svg" alt="previous song button">
+                </button>
+                <button class="player__icon--small">
+                    <img src="./img/repeat_ico.svg" alt="previous song button">
+                </button>
+            </div>
+            <div class="player-progress-bar">
+                <span class="player-progress-bar__time">
+                    1.47
+                </span>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+                <span class="player-progress-bar__time">
+                    4.21
+                </span>
+            </div>
+            <div class="player-chart"></div>
+        </section>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <button class="all-song-button">
+                    <img src="./img/playlist_ico.svg" alt="Playlist button" class="all-song-button__icon">
+                </button>
+            </div>
+            <div class="next-song">
+                <p class="next-song__heading">
+                    NEXT
+                </p>
+                <h3 class="next-song__name">
+                    Livin' In A Movie
+                </h3>
+            </div>
+            <span class="next-song__time">
+                3:27
+            </span>
+        </footer>
+    </div>
+</body>
+
+</html>
