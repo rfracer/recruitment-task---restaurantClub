@@ -1,11 +1,10 @@
 // VARIABLES
-$primary-color: #66a80f;
+$primary-color: #0fd65a;
 $secondary-color: #f2f2f2;
-$headers-color: #ffffff;
-$font-main-color: #2c2c2c;
-$background-color: #66a80f;
-$table-bottom-border-color: #d2d2d2;
-$footer-background-color: #54880c;
+$white-color: #ffffff;
+$light-grey: #9a9b9b;
+$font-main-color: #1b1b1b;
+$background-color: #1b1b1b;
 
 // BASIC GLOBAL SETTINGS, RESETS
 *,
@@ -23,12 +22,23 @@ html {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
+  font-weight: 300;
   color: $font-main-color;
   background-color: $background-color;
   position: relative;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 input,
 select {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
 }
