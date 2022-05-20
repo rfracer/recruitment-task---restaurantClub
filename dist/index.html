@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <script src="assets/scripts/app.js" defer></script>
 </head>
 
@@ -27,21 +28,21 @@
                     <h3 class="header__album-title">Unreleased</h3>
                 </div>
                 <div class="show-more">
-                    <button class="show-more__button">
+                    <button id="show-more-button" class="show-more__button">
                         <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
                     </button>
                 </div>
             </header>
-            <nav class="full-width menu">
+            <nav role="dialog" id="show-more-view" class="full-width menu">
                 <div class="container">
                     <header class="header">
                         <div class="previous-page">
-                            <a href="#" class="previous-page__link">
+                            <button href="#" class="previous-page__link">
                                 <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
-                            </a>
+                            </button>
                         </div>
                         <div class="show-more">
-                            <button class="show-more__button">
+                            <button id="close-show-more" class="show-more__button">
                                 <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
                             </button>
                         </div>
@@ -72,18 +73,47 @@
                     </div>
                 </div>
             </nav>
-            <section class="section-songs" aria-label="Songs carrousel playlist">
-                <div class="song-item">
-                    <div class="song-item__image">
-                        <img src="./img/unreleased_cover.png" alt="Kayne West album photo" class="song-item__image">
-                    </div>
-                    <h1 class="song-item__title">
-                        Self Conscious
-                    </h1>
-                    <p class="song-item__author">KAYNE WEST</p>
+        </div>
+        <section class="section-songs" aria-label="Songs carrousel playlist">
+            <div class="splide slider" role="group" aria-label="Slider of songs">
+                <div class="splide__track slider__container" data-glide-el="track">
+                    <ul class="splide__list">
+                        <li class="song-item splide__slide">
+                            <div class="song-item__image">
+                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
+                                    class="song-item__image">
+                            </div>
+                            <h1 class="song-item__title">
+                                First song
+                            </h1>
+                            <p class="song-item__author">Author 1</p>
+                        </li>
+                        <li class="song-item splide__slide">
+                            <div class="song-item__image">
+                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
+                                    class="song-item__image">
+                            </div>
+                            <h1 class="song-item__title">
+                                Self Conscious
+                            </h1>
+                            <p class="song-item__author">KAYNE WEST</p>
+                        </li>
+                        <li class="song-item splide__slide">
+                            <div class="song-item__image">
+                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
+                                    class="song-item__image">
+                            </div>
+                            <h1 class="song-item__title">
+                                Third song
+                            </h1>
+                            <p class="song-item__author">Author 3</p>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <section aria-label="Song player" class="player">
+            </div>
+        </section>
+        <section aria-label="Song player" class="player">
+            <div class="container">
                 <div class="player-wrapper">
                     <button class="player__icon player__icon--small">
                         <img src="./img/repeat_ico.svg" alt="playlist button">
@@ -92,7 +122,7 @@
                         <img src="./img/previous_ico.svg" alt="previous song button">
                     </button>
                     <button id="play-btn" class="player__icon player__icon--big">
-                        <img src="./img/unactive.png" alt="previous song button">
+                        <img id="play-btn-icon" src="./img/unactive.png" alt="previous song button">
                     </button>
                     <button class="player__icon player__icon--small">
                         <img src="./img/next_ico.svg" alt="previous song button">
@@ -103,19 +133,20 @@
                 </div>
                 <div class="player-progress-bar">
                     <span class="player-progress-bar__time">
-                        1.47
+                        1:47
                     </span>
                     <div class="player-progress-bar__wrapper">
                         <div class="player-progress-bar__value"></div>
                     </div>
                     <span class="player-progress-bar__time">
-                        4.21
+                        4:21
                     </span>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
         <div class="fixed-bottom-wrapper">
-            <div class="player-chart"></div>
+            <div id="player-chart" class="player-chart"></div>
             <footer class="footer">
                 <div class="container">
                     <div class="footer-wrapper">
