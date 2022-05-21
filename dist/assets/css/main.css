@@ -44,10 +44,17 @@ button {
 .app-wrapper {
   position: relative;
   height: 100%;
-  padding-top: 4rem;
 }
 
 /* APP COMPONENTS */
+.main-view {
+  padding-top: 4rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(27, 27, 27, 0.85)), color-stop(60%, #1b1b1b)), url("../../img/bg_image.jpg");
+  background-image: linear-gradient(rgba(27, 27, 27, 0.85) 20%, #1b1b1b 60%), url("../../img/bg_image.jpg");
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,7 +246,7 @@ button {
 }
 
 .player-progress-bar__value {
-  width: 50%;
+  width: 0%;
   height: 5px;
   background-color: #2a2a2a;
 }
@@ -255,7 +262,7 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 40px;
+  height: 45px;
   width: 100%;
   margin-top: 3rem;
 }
@@ -294,12 +301,11 @@ button {
   padding: 2rem 0;
 }
 
-.footer .all-song-button {
-  background: none;
-  border: none;
+.footer .playlist-open-btn {
+  cursor: pointer;
 }
 
-.footer .all-song-button img {
+.footer .playlist-open-btn img {
   width: 28px;
 }
 
@@ -420,12 +426,18 @@ button {
   text-decoration: none;
 }
 
-.section-all-songs {
-  -webkit-transform: translateY(9999px);
-          transform: translateY(9999px);
+.section-playlist {
+  -webkit-transform: translateY(1200px);
+          transform: translateY(1200px);
+  opacity: 1;
+  z-index: 999;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
-.section-all-songs::after {
+.section-playlist::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -434,6 +446,11 @@ button {
   background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(rgba(255, 255, 255, 0.0001))), rgba(255, 255, 255, 0.0001);
   background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0.0001) 100%), rgba(255, 255, 255, 0.0001);
   z-index: 0;
+}
+
+.section-playlist.isActive {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .list-page-header {

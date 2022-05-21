@@ -9,14 +9,8 @@ export class PlayerChart {
   generateItem() {
     const item = document.createElement('div');
     item.classList.add('player-chart__item');
-    const randomHeight = randomNumber(40, 100);
+    const randomHeight = randomNumber(30, 100);
     item.style.height = `${randomHeight}%`;
     this.chart.appendChild(item);
-  }
-  generateChart() {
-    this.interval = setInterval(() => this.generateItem(), 1000);
-  }
-  stopChart() {
-    clearInterval(this.interval);
   }
 }

@@ -1,5 +1,6 @@
 import Splide from '@splidejs/splide';
 import { Player } from './Player';
+import { Playlist } from './Playlist';
 import { splideSettings as settings } from './helpers/splideSettings';
 class App {
   constructor() {
@@ -8,13 +9,20 @@ class App {
     this.showMoreButton.addEventListener('click', () => this.showMoreHandler());
 
     this.closeShowMoreButton = document.getElementById('close-show-more');
+    this.backToMainViewButton = document.getElementById(
+      'back-to-main-view-btn'
+    );
     this.closeShowMoreButton.addEventListener('click', () =>
+      this.closeShowMoreHandler()
+    );
+    this.backToMainViewButton.addEventListener('click', () =>
       this.closeShowMoreHandler()
     );
   }
   init() {
     new Splide('.splide', settings).mount();
-    new Player();
+    this.player = new Player();
+    this.playlist = new Playlist();
   }
   showMoreHandler() {
     this.showMoreViewContainer.classList.add('isActive');

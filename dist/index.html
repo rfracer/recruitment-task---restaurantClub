@@ -16,163 +16,164 @@
 
 <body>
     <div class="app-wrapper">
-        <div class="container">
-            <header class="header">
-                <div class="previous-page">
-                    <a href="#" class="previous-page__link">
-                        <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
-                    </a>
-                </div>
-                <div class="headers-wrapper">
-                    <h3 class="header__category-title">ALBUM</h3>
-                    <h3 class="header__album-title">Unreleased</h3>
-                </div>
-                <div class="show-more">
-                    <button id="show-more-button" class="show-more__button">
-                        <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
-                    </button>
-                </div>
-            </header>
-            <nav role="dialog" id="show-more-view" class="full-width menu">
-                <div class="container">
-                    <header class="header">
-                        <div class="previous-page">
-                            <button href="#" class="previous-page__link">
-                                <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
-                            </button>
-                        </div>
-                        <div class="show-more">
-                            <button id="close-show-more" class="show-more__button">
-                                <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
-                            </button>
-                        </div>
-                    </header>
-                    <div class="menu-info-wrapper">
-                        <img class="menu-info__img" src="./img/unreleased_small.png" alt="Kanye West album">
-                        <h1 class="song-item__title">
-                            Self Conscious
-                        </h1>
-                        <p class="song-item__author">KAYNE WEST</p>
-                        <ul class="menu-info-list">
-                            <li class="menu-info-list__item">
-                                <a href="#" class="menu-info-list__link">
-                                    Add to playlist
-                                </a>
-                            </li>
-                            <li class="menu-info-list__item">
-                                <a href="#" class="menu-info-list__link">
-                                    Show album
-                                </a>
-                            </li>
-                            <li class="menu-info-list__item">
-                                <a href="#" class="menu-info-list__link">
-                                    Share with friends
-                                </a>
-                            </li>
-                        </ul>
+        <div class="main-view">
+            <div class="container">
+                <header class="header">
+                    <div class="previous-page">
+                        <a href="#" class="previous-page__link">
+                            <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
+                        </a>
                     </div>
-                </div>
-            </nav>
-        </div>
-        <section class="section-songs" aria-label="Songs carrousel playlist">
-            <div class="splide slider" role="group" aria-label="Slider of songs">
-                <div class="splide__track slider__container" data-glide-el="track">
-                    <ul class="splide__list">
-                        <li class="song-item splide__slide">
-                            <div class="song-item__image">
-                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
-                                    class="song-item__image">
+                    <div class="headers-wrapper">
+                        <h3 class="header__category-title">ALBUM</h3>
+                        <h3 class="header__album-title">Unreleased</h3>
+                    </div>
+                    <div class="show-more">
+                        <button id="show-more-button" class="show-more__button">
+                            <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+                        </button>
+                    </div>
+                </header>
+                <nav role="dialog" id="show-more-view" class="full-width menu">
+                    <div class="container">
+                        <header class="header">
+                            <div class="previous-page">
+                                <button id="back-to-main-view-btn" class="previous-page__link">
+                                    <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
+                                </button>
                             </div>
-                            <h1 class="song-item__title">
-                                First song
-                            </h1>
-                            <p class="song-item__author">Author 1</p>
-                        </li>
-                        <li class="song-item splide__slide">
-                            <div class="song-item__image">
-                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
-                                    class="song-item__image">
+                            <div class="show-more">
+                                <button id="close-show-more" class="show-more__button">
+                                    <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+                                </button>
                             </div>
+                        </header>
+                        <div class="menu-info-wrapper">
+                            <img class="menu-info__img" src="./img/unreleased_small.png" alt="Kanye West album">
                             <h1 class="song-item__title">
                                 Self Conscious
                             </h1>
                             <p class="song-item__author">KAYNE WEST</p>
-                        </li>
-                        <li class="song-item splide__slide">
-                            <div class="song-item__image">
-                                <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
-                                    class="song-item__image">
-                            </div>
-                            <h1 class="song-item__title">
-                                Third song
-                            </h1>
-                            <p class="song-item__author">Author 3</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section aria-label="Song player" class="player">
-            <div class="container">
-                <div class="player-wrapper">
-                    <button class="player__icon player__icon--small">
-                        <img src="./img/repeat_ico.svg" alt="playlist button">
-                    </button>
-                    <button class="player__icon player__icon--small">
-                        <img src="./img/previous_ico.svg" alt="previous song button">
-                    </button>
-                    <button id="play-btn" class="player__icon player__icon--big">
-                        <img id="play-btn-icon" src="./img/unactive.png" alt="previous song button">
-                    </button>
-                    <button class="player__icon player__icon--small">
-                        <img src="./img/next_ico.svg" alt="previous song button">
-                    </button>
-                    <button class="player__icon player__icon--small">
-                        <img src="./img/repeat_ico.svg" alt="previous song button">
-                    </button>
-                </div>
-                <div class="player-progress-bar">
-                    <span class="player-progress-bar__time">
-                        1:47
-                    </span>
-                    <div class="player-progress-bar__wrapper">
-                        <div class="player-progress-bar__value"></div>
-                    </div>
-                    <span class="player-progress-bar__time">
-                        4:21
-                    </span>
-                </div>
-            </div>
-        </section>
-
-        <div class="fixed-bottom-wrapper">
-            <div id="player-chart" class="player-chart"></div>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-wrapper">
-                        <div class="inner-wrapper">
-                            <button class="all-song-button">
-                                <img src="./img/playlist_ico.svg" alt="Playlist button" class="all-song-button__icon">
-                            </button>
-                            <div class="next-song">
-                                <p class="next-song__heading">
-                                    NEXT
-                                </p>
-
-                                <h3 class="next-song__name">
-                                    Livin' In A Movie
-                                </h3>
-                            </div>
+                            <ul class="menu-info-list">
+                                <li class="menu-info-list__item">
+                                    <a href="#" class="menu-info-list__link">
+                                        Add to playlist
+                                    </a>
+                                </li>
+                                <li class="menu-info-list__item">
+                                    <a href="#" class="menu-info-list__link">
+                                        Show album
+                                    </a>
+                                </li>
+                                <li class="menu-info-list__item">
+                                    <a href="#" class="menu-info-list__link">
+                                        Share with friends
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="dotted-line"></div>
-                        <span class="next-song__time">
-                            3:27
+                    </div>
+                </nav>
+            </div>
+            <section class="section-songs" aria-label="Songs carrousel playlist">
+                <div class="splide" role="group" aria-label="Slider of songs">
+                    <div class="splide__track slider__container" data-glide-el="track">
+                        <ul class="splide__list">
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/cover-1.png" alt="Kayne West album photo" class="song-item__image">
+                                </div>
+                                <h1 class="song-item__title">
+                                    First song
+                                </h1>
+                                <p class="song-item__author">Author 1</p>
+                            </li>
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
+                                        class="song-item__image">
+                                </div>
+                                <h1 class="song-item__title">
+                                    Self Conscious
+                                </h1>
+                                <p class="song-item__author">KAYNE WEST</p>
+                            </li>
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/cover.png" alt="Kayne West album photo" class="song-item__image">
+                                </div>
+                                <h1 class="song-item__title">
+                                    Third song
+                                </h1>
+                                <p class="song-item__author">Author 3</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section aria-label="Song player" class="player">
+                <div class="container">
+                    <div class="player-wrapper">
+                        <button class="player__icon player__icon--small">
+                            <img src="./img/shuffle_ico.svg" alt="playlist button">
+                        </button>
+                        <button class="player__icon player__icon--small">
+                            <img src="./img/previous_ico.svg" alt="previous song button">
+                        </button>
+                        <button id="play-btn" class="player__icon player__icon--big">
+                            <img id="play-btn-icon" src="./img/unactive.png" alt="previous song button">
+                        </button>
+                        <button class="player__icon player__icon--small">
+                            <img src="./img/next_ico.svg" alt="previous song button">
+                        </button>
+                        <button class="player__icon player__icon--small">
+                            <img src="./img/repeat_ico.svg" alt="previous song button">
+                        </button>
+                    </div>
+                    <div class="player-progress-bar">
+                        <span id="player-current-time" class="player-progress-bar__time">
+                            0:00
+                        </span>
+                        <div class="player-progress-bar__wrapper">
+                            <div id='progress-bar-value' class="player-progress-bar__value"></div>
+                        </div>
+                        <span class="player-progress-bar__time">
+                            4:21
                         </span>
                     </div>
                 </div>
-            </footer>
+            </section>
+
+            <div class="fixed-bottom-wrapper">
+                <div id="player-chart" class="player-chart"></div>
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-wrapper">
+                            <div class="inner-wrapper">
+                                <button id="show-playlist-btn" class="playlist-open-btn">
+                                    <img src="./img/playlist_ico.svg" alt="Playlist button"
+                                        class="playlist-open-btn__icon">
+                                </button>
+                                <div class="next-song">
+                                    <p class="next-song__heading">
+                                        NEXT
+                                    </p>
+
+                                    <h3 class="next-song__name">
+                                        Livin' In A Movie
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="dotted-line"></div>
+                            <span class="next-song__time">
+                                3:27
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
-        <section class="section-all-songs full-width">
+        <section id="playlist" class="section-playlist full-width">
             <header class="list-page-header">
                 <div class="container">
                     <div class="list-page-header__wrapper">
@@ -342,7 +343,7 @@
                     <button href="#" class="btn btn--primary btn--wide">
                         SHUFFLE PLAY
                     </button>
-                    <button class="hide-all-songs-btn">
+                    <button id="hide-playlist-btn" class="hide-all-songs-btn">
                         <img src="./img/hide_ico.svg" alt="hide icon">
                     </button>
                 </div>
