@@ -3,6 +3,6 @@ export const splideSettings = {
   padding: { left: 87, right: 87 },
   start: 1,
   pagination: false,
-  arrows: false,
+  arrows: true,
   gap: '2rem',
 };

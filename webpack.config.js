@@ -11,7 +11,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/assets/scripts'),
     publicPath: '/assets/scripts/',
   },
-  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

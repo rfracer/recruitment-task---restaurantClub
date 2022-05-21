@@ -4,18 +4,20 @@ import { Playlist } from './Playlist';
 import { splideSettings as settings } from './helpers/splideSettings';
 class App {
   constructor() {
-    this.showMoreButton = document.getElementById('show-more-button');
     this.showMoreViewContainer = document.getElementById('show-more-view');
-    this.showMoreButton.addEventListener('click', () => this.showMoreHandler());
 
-    this.closeShowMoreButton = document.getElementById('close-show-more');
-    this.backToMainViewButton = document.getElementById(
-      'back-to-main-view-btn'
-    );
-    this.closeShowMoreButton.addEventListener('click', () =>
+    const showMoreButton = document.getElementById('show-more-button');
+    showMoreButton.addEventListener('click', () => this.showMoreHandler());
+
+    const closeShowMoreButton = document.getElementById('close-show-more');
+    closeShowMoreButton.addEventListener('click', () =>
       this.closeShowMoreHandler()
     );
-    this.backToMainViewButton.addEventListener('click', () =>
+
+    const backToMainViewButton = document.getElementById(
+      'back-to-main-view-btn'
+    );
+    backToMainViewButton.addEventListener('click', () =>
       this.closeShowMoreHandler()
     );
   }

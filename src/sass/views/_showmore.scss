@@ -1,0 +1,67 @@
+/* Show more view related styles */
+
+#show-more-view {
+  padding-top: 4rem;
+  transform: translateX(600px);
+  z-index: 2;
+  transition: transform 0.3s ease-in-out;
+}
+
+#show-more-view.isActive {
+  transform: translateX(0px);
+}
+
+.show-more-info {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  &__img {
+    margin: 1rem auto;
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    color: $primary-color;
+    opacity: 1;
+  }
+
+  &__author {
+    color: $light-grey;
+    opacity: 1;
+  }
+
+  &-list {
+    position: relative;
+    margin-top: 6rem;
+    list-style: none;
+    text-align: center;
+
+    &::before {
+      content: '.  .  .';
+      position: absolute;
+      top: -4rem;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      color: $light-grey;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+
+    &__item {
+      margin-bottom: 2rem;
+      color: $white-color;
+    }
+
+    &__link {
+      font-size: 1.8rem;
+      color: $white-color;
+      text-decoration: none;
+    }
+  }
+}

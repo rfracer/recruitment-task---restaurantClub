@@ -1,8 +1,7 @@
 import { randomNumber } from './helpers/utilities';
 
 export class PlayerChart {
-  constructor(isActive) {
-    this.isActive = isActive;
+  constructor() {
     this.chart = document.getElementById('player-chart');
   }
 
