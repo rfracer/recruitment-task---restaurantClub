@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/scripts/app.js" async></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div class="main-view">
+            <div class="container">
+                <header class="header">
+                    <a href="#" class="previous-page__link">
+                        <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
+                    </a>
+                    <div class="header-inner-wrapper">
+                        <p class="header__category-title">ALBUM</p>
+                        <h1 class="header__album-title">Unreleased</h1>
+                    </div>
+                    <button id="show-more-button" class="show-more-button">
+                        <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+                    </button>
+                </header>
+                <nav role="dialog" id="show-more-view" class="full-width show-more">
+                    <div class="container">
+                        <header class="header">
+                            <button id="back-to-main-view-btn" class="previous-page__link">
+                                <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
+                            </button>
+                            <button id="close-show-more" class="show-more-button">
+                                <img src="./img/more_ico.svg" alt="Show more icon" class="show-more__icon">
+                            </button>
+                        </header>
+                        <div class="show-more-info__wrapper">
+                            <img class="show-more-info__img" src="./img/unreleased_small.png"
+                                alt="Kanye West album photo">
+                            <h1 class="show-more-info__title">
+                                Self Conscious
+                            </h1>
+                            <p class="show-more-info__author">KAYNE WEST</p>
+                            <ul class="show-more-info-list">
+                                <li class="show-more-info-list__item">
+                                    <a href="#" class="show-more-info-list__link">
+                                        Add to playlist
+                                    </a>
+                                </li>
+                                <li class="show-more-info-list__item">
+                                    <a href="#" class="show-more-info-list__link">
+                                        Show album
+                                    </a>
+                                </li>
+                                <li class="show-more-info-list__item">
+                                    <a href="#" class="show-more-info-list__link">
+                                        Share with friends
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <section class="section-songs" aria-label="Songs carrousel section">
+                <div class="splide" aria-label="Slider of songs">
+                    <div class="splide__track slider__container" data-glide-el="track">
+                        <ul class="splide__list slider">
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/cover-1.png" alt="Kayne West album photo" class="song-item__image">
+                                </div>
+                                <h3 class="song-item__title">
+                                    First song
+                                </h3>
+                                <p class="song-item__author">Author 1</p>
+                            </li>
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/unreleased_cover.png" alt="Kayne West album photo"
+                                        class="song-item__image">
+                                </div>
+                                <h3 class="song-item__title">
+                                    Self Conscious
+                                </h3>
+                                <p class="song-item__author">KAYNE WEST</p>
+                            </li>
+                            <li class="song-item splide__slide">
+                                <div class="song-item__image">
+                                    <img src="./img/cover.png" alt="Kayne West album photo" class="song-item__image">
+                                </div>
+                                <h3 class="song-item__title">
+                                    Third song
+                                </h3>
+                                <p class="song-item__author">Author 3</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div aria-label="Song player with action buttons" class="player">
+                        <div class="container">
+                            <div class="player-wrapper">
+                                <div class="splide__arrows">
+                                    <button class="player__icon player__icon--small">
+                                        <img src="./img/shuffle_ico.svg" alt="shuffle button">
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--prev player__icon player__icon--small">
+                                        <img src="./img/previous_ico.svg" alt="previous song button">
+                                    </button>
+                                    <button id="play-btn" class="player__icon player__icon--big">
+                                        <img id="play-btn-icon" src="./img/unactive.png" alt="play song button">
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next player__icon player__icon--small">
+                                        <img src="./img/next_ico.svg" alt="next song button">
+                                    </button>
+                                    <button class="player__icon player__icon--small">
+                                        <img src="./img/repeat_ico.svg" alt="repeat song button">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="player-progress-bar">
+                                <span id="player-current-time" class="player-progress-bar__time">
+                                    0:00
+                                </span>
+                                <div class="player-progress-bar__wrapper">
+                                    <div id='progress-bar-value' class="player-progress-bar__value"></div>
+                                </div>
+                                <span class="player-progress-bar__time">
+                                    4:21
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="fixed-bottom-wrapper">
+                <div id="player-chart" class="player-chart"></div>
+                <footer class="footer">
+                    <div class="container">
+                        <div class="footer-wrapper">
+                            <div class="inner-wrapper">
+                                <button id="show-playlist-btn" class="playlist-open-btn">
+                                    <img src="./img/playlist_ico.svg" alt="Playlist button"
+                                        class="playlist-open-btn__icon">
+                                </button>
+                                <div class="next-song">
+                                    <p class="next-song__heading">
+                                        NEXT
+                                    </p>
+                                    <h3 class="next-song__name">
+                                        Livin' In A Movie
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="dotted-line"></div>
+                            <span class="next-song__time">
+                                3:27
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <section id="playlist" class="section-playlist full-width" aria-label="Playlist">
+            <header class="playlist-page-header">
+                <div class="container">
+                    <div class="playlist-page-header__wrapper">
+                        <a href="#" class="previous-page__link">
+                            <img class="previous-page__icon" src="./img/back_ico.svg" alt="previous page icon">
+                        </a>
+                        <div class="playlist-page-header__info">
+                            <h1 class="playlist-page-header__info__song-name">Self Conscious</h1>
+                            <p class="playlist-page-header__info__song-author">KANYE WEST</p>
+                        </div>
+                        <img class="playlist-page-header__img" src="./img/active.png" alt="">
+                    </div>
+                </div>
+            </header>
+            <div class="list-wrapper">
+                <ol class="playlist-list">
+                    <div class="container">
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie2
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie2
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie2
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie2
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                        <li class="playlist-list__item">
+                            <span class="playlist-list__item__title">
+                                Livin' In A Movie2
+                            </span>
+                            <div class="dotted-line"></div>
+                            <span class="playlist-list__item__time">
+                                3:51
+                            </span>
+                        </li>
+                    </div>
+                </ol>
+                <div class="playlist-bottom-wrapper">
+                    <button href="#" class="btn btn--primary btn--wide">
+                        SHUFFLE PLAY
+                    </button>
+                    <button id="hide-playlist-btn" class="hide-playlist-btn">
+                        <img src="./img/hide_ico.svg" alt="hide icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
