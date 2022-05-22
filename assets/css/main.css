@@ -262,7 +262,7 @@ button {
 
 @media (min-height: 690px) {
   .splide__slide {
-    height: calc(38vh + 2.2rem);
+    height: calc(36vh + 2.2rem);
   }
 }
 
