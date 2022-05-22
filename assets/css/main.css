@@ -99,7 +99,7 @@ button {
   margin-top: 2.5rem;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .section-songs {
     margin-top: 6vh;
   }
@@ -114,7 +114,7 @@ button {
   z-index: 2;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .fixed-bottom-wrapper {
     height: 140px;
   }
@@ -261,7 +261,7 @@ button {
   padding-bottom: 0.5rem;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .splide__slide {
     height: calc(34vh + 2rem);
     margin-bottom: 1rem;
@@ -292,7 +292,7 @@ button {
   width: 90%;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .splide__slide.is-active .song-item__image img {
     width: 100%;
   }
@@ -354,7 +354,7 @@ button {
   position: relative;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .player-wrapper {
     margin-top: 0.5rem;
   }
@@ -377,7 +377,7 @@ button {
   width: 150px;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .player__icon--big {
     width: 160px;
   }
@@ -394,7 +394,7 @@ button {
   margin-top: 0;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .player-progress-bar {
     margin-top: 0.3rem;
   }
@@ -430,7 +430,7 @@ button {
   margin-top: 3rem;
 }
 
-@media (min-height: 660px) {
+@media (min-height: 640px) {
   .player-chart {
     height: 40px;
   }
