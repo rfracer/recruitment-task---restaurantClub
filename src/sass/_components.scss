@@ -85,8 +85,12 @@
 /* Splide custom styling to override library default styles */
 
 .splide__slide {
-  height: 340px;
+  height: 280px;
   margin-right: 0 !important;
+
+  @include big-phone {
+    height: 38vh;
+  }
 
   &.is-active {
     .song-item {
@@ -161,7 +165,10 @@
 .player {
   &-wrapper {
     position: relative;
-    margin-top: 3rem;
+
+    @include big-phone {
+      margin-top: 2rem;
+    }
   }
 
   &__icon {
@@ -176,7 +183,11 @@
     }
 
     &--big {
-      width: 200px;
+      width: 160px;
+
+      @include big-phone {
+        width: 200px;
+      }
     }
   }
 }
@@ -185,7 +196,11 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 0;
+
+  @include big-phone {
+    margin-top: 3rem;
+  }
 
   &__wrapper {
     flex: 1;
@@ -207,9 +222,13 @@
 .player-chart {
   display: flex;
   align-items: flex-end;
-  height: 50px;
+  height: 40px;
   width: 100%;
   margin-top: 3rem;
+
+  @include big-phone {
+    height: 50px;
+  }
 
   &__item {
     width: 3px;

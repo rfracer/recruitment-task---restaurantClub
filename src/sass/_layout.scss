@@ -49,7 +49,11 @@
 }
 
 .section-songs {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
+
+  @include big-phone {
+    margin-top: 6vh;
+  }
 }
 
 /* Fixed bottom container */
@@ -57,8 +61,12 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 160px;
+  height: 150px;
   z-index: 2;
+
+  @include big-phone {
+    height: 160px;
+  }
 }
 
 .footer {
