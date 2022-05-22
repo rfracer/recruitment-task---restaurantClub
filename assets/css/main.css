@@ -258,11 +258,13 @@ button {
 .splide__slide {
   height: calc(43vh + 2.2rem);
   margin-right: 0 !important;
+  padding-bottom: 0.5rem;
 }
 
 @media (min-height: 690px) {
   .splide__slide {
-    height: calc(36vh + 2.2rem);
+    height: calc(34vh + 2rem);
+    margin-bottom: 1rem;
   }
 }
 
@@ -288,6 +290,12 @@ button {
 
 .splide__slide.is-active .song-item__image img {
   width: 90%;
+}
+
+@media (min-height: 690px) {
+  .splide__slide.is-active .song-item__image img {
+    width: 100%;
+  }
 }
 
 .splide__slide:not(.is-active) .song-item__title {
