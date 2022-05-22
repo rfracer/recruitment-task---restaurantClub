@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "webpack-dev-server",
     "build": "webpack",
-    "build:prod": "webpack --config webpack.config.prod.js"
+    "build:prod": "webpack --config webpack.config.prod.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "August Biadala",
   "license": "MIT",
@@ -17,6 +18,7 @@
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
+    "gh-pages": "^4.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "webpack": "^5.70.0",

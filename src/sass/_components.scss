@@ -85,11 +85,13 @@
 /* Splide custom styling to override library default styles */
 
 .splide__slide {
-  height: 280px;
+  height: calc(43vh + 2.4rem);
   margin-right: 0 !important;
+  padding-bottom: 0.5rem;
 
   @include big-phone {
-    height: 38vh;
+    height: calc(34vh + 2rem);
+    margin-bottom: 1rem;
   }
 
   &.is-active {
@@ -109,6 +111,14 @@
           border-radius: 50%;
           background: $background-color;
           transition: 0.3s ease-in-out;
+        }
+
+        img {
+          width: 90%;
+
+          @include big-phone {
+            width: 100%;
+          }
         }
       }
     }
@@ -167,7 +177,7 @@
     position: relative;
 
     @include big-phone {
-      margin-top: 2rem;
+      margin-top: 0.5rem;
     }
   }
 
@@ -183,10 +193,10 @@
     }
 
     &--big {
-      width: 160px;
+      width: 150px;
 
       @include big-phone {
-        width: 200px;
+        width: 160px;
       }
     }
   }
@@ -199,7 +209,7 @@
   margin-top: 0;
 
   @include big-phone {
-    margin-top: 3rem;
+    margin-top: 0.3rem;
   }
 
   &__wrapper {
@@ -222,12 +232,12 @@
 .player-chart {
   display: flex;
   align-items: flex-end;
-  height: 40px;
+  height: 32px;
   width: 100%;
   margin-top: 3rem;
 
   @include big-phone {
-    height: 50px;
+    height: 40px;
   }
 
   &__item {

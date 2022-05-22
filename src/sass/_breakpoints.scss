@@ -6,7 +6,7 @@ $breakpoints: (
 );
 
 @mixin big-phone {
-  @media (min-height: '720px') {
+  @media (min-height: '640px') {
     @content;
   }
 }
